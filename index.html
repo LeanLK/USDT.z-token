@@ -211,6 +211,14 @@
             margin: 16px 0;
         }
         
+        .success-box {
+            background: #2ea0431a;
+            border: 1px solid #238636;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        
         .warning-box {
             background: #bb80001a;
             border: 1px solid #d29922;
@@ -309,6 +317,11 @@
                 
                 <p><strong>USDT.z</strong> is a next-generation stablecoin pegged 1:1 to the US dollar, built on Binance Smart Chain (BEP-20). This is an educational and research project demonstrating blockchain tokenomics, DeFi integration, and smart contract security.</p>
 
+                <div class="success-box">
+                    <strong>✅ Live on Mainnet!</strong><br>
+                    Token successfully deployed with active liquidity on PancakeSwap V2. Ready for trading and DeFi integrations.
+                </div>
+
                 <h2>📋 Token Information</h2>
                 <ul>
                     <li><strong>Name:</strong> Tether USD Bridged ZED20</li>
@@ -316,11 +329,23 @@
                     <li><strong>Network:</strong> BNB Smart Chain (BEP-20)</li>
                     <li><strong>Decimals:</strong> 18</li>
                     <li><strong>Total Supply:</strong> 1,000,000 USDT.z</li>
+                    <li><strong>Status:</strong> ✅ Deployed & Verified</li>
                 </ul>
 
                 <p><strong>Contract Address:</strong></p>
                 <div class="contract-address">
                     0xB1e01D8461E7C7Ec9897eAF603E337Caa4E7a704
+                </div>
+
+                <h2>💧 Liquidity Pool</h2>
+                <div class="info-box">
+                    <strong>PancakeSwap V2 - BNB/USDT.z Pair</strong>
+                    <ul style="margin-top: 12px;">
+                        <li><strong>DEX:</strong> PancakeSwap V2</li>
+                        <li><strong>Trading Pair:</strong> BNB/USDT.z</li>
+                        <li><strong>Status:</strong> ✅ Active & Trading</li>
+                        <li><strong>Liquidity Transaction:</strong> <a href="https://bscscan.com/tx/0xf2192e37554a65e1404038a0c6aa4b65f08eee81a1d0f517068c401447b97ace" target="_blank">View on BscScan</a></li>
+                    </ul>
                 </div>
 
                 <h2>🚀 Features</h2>
@@ -331,6 +356,7 @@
                     <li>✅ <strong>Low Fees:</strong> BSC network ensures ~$0.10 transaction costs</li>
                     <li>✅ <strong>Transparent:</strong> Fully verified smart contract, open-source code</li>
                     <li>✅ <strong>OpenZeppelin Standards:</strong> Built on industry-standard libraries</li>
+                    <li>✅ <strong>Active Liquidity:</strong> Live trading on PancakeSwap V2</li>
                 </ul>
 
                 <h2>📦 Smart Contract Architecture</h2>
@@ -384,9 +410,11 @@ feeWallet: &lt;your_wallet_address&gt;</pre></div>
                 <h2>📊 Tokenomics</h2>
                 <ul>
                     <li><strong>Total Supply:</strong> 1,000,000 USDT.z</li>
-                    <li><strong>Initial Liquidity:</strong> 300 USDT.z (PancakeSwap V3)</li>
+                    <li><strong>Initial Liquidity:</strong> Added to PancakeSwap V2</li>
+                    <li><strong>Trading Pair:</strong> BNB/USDT.z</li>
                     <li><strong>Transfer Fee:</strong> Configurable (0-10%), whitelist exempt</li>
                     <li><strong>Distribution:</strong> Fair launch, no pre-mine</li>
+                    <li><strong>DEX:</strong> PancakeSwap V2 (active trading)</li>
                 </ul>
 
                 <h2>🔗 Links</h2>
@@ -397,6 +425,20 @@ feeWallet: &lt;your_wallet_address&gt;</pre></div>
                     <a href="https://twitter.com/USDTzCommunity" class="btn-secondary" target="_blank">🐦 Twitter</a>
                     <a href="https://t.me/USDTzCommunity" class="btn-secondary" target="_blank">💬 Telegram</a>
                 </div>
+
+                <h3>📄 Documentation</h3>
+                <ul>
+                    <li><a href="https://github.com/LeanLK/USDT.z-token/blob/main/docs/Whitepaper.pdf" target="_blank">Whitepaper (PDF)</a></li>
+                    <li><a href="https://github.com/LeanLK/USDT.z-token/blob/main/docs/audit.pdf" target="_blank">Security Audit (PDF)</a></li>
+                    <li><a href="https://github.com/LeanLK/USDT.z-token/blob/main/docs/roadmap.pdf" target="_blank">Roadmap (PDF)</a></li>
+                </ul>
+
+                <h3>🔗 On-Chain Verification</h3>
+                <ul>
+                    <li><strong>Contract Verification:</strong> <a href="https://bscscan.com/address/0xB1e01D8461E7C7Ec9897eAF603E337Caa4E7a704#code" target="_blank">View Verified Code</a></li>
+                    <li><strong>Liquidity Addition:</strong> <a href="https://bscscan.com/tx/0xf2192e37554a65e1404038a0c6aa4b65f08eee81a1d0f517068c401447b97ace" target="_blank">View Transaction</a></li>
+                    <li><strong>Token Info:</strong> <a href="https://bscscan.com/token/0xB1e01D8461E7C7Ec9897eAF603E337Caa4E7a704" target="_blank">View on BscScan</a></li>
+                </ul>
 
                 <div class="warning-box">
                     <strong>⚠️ Disclaimer:</strong><br>
@@ -453,11 +495,15 @@ feeWallet: &lt;your_wallet_address&gt;</pre></div>
                     </div>
                     <div class="file-item" style="padding-left: 40px;">
                         <span class="file-icon">📄</span>
-                        whitepaper.pdf
+                        Whitepaper.pdf
                     </div>
                     <div class="file-item" style="padding-left: 40px;">
                         <span class="file-icon">📄</span>
                         audit.pdf
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        roadmap.pdf
                     </div>
                     <div class="file-item">
                         <span class="file-icon">📄</span>
@@ -466,6 +512,10 @@ feeWallet: &lt;your_wallet_address&gt;</pre></div>
                     <div class="file-item">
                         <span class="file-icon">📄</span>
                         LICENSE
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        index.html
                     </div>
                 </div>
             </div>
@@ -539,6 +589,14 @@ contract TeamToken is ERC20 {
                     <li>✅ Whitelist system (fee-exempt addresses)</li>
                     <li>🚫 Blacklist system (blocked addresses)</li>
                     <li>🔐 Based on OpenZeppelin standards</li>
+                </ul>
+
+                <h3>Verification & Audit:</h3>
+                <ul>
+                    <li>✅ Contract verified on BscScan</li>
+                    <li>✅ Security audit completed</li>
+                    <li>✅ Active liquidity pool on PancakeSwap</li>
+                    <li>✅ Open-source code available</li>
                 </ul>
             </div>
         </div>
