@@ -181,6 +181,7 @@
             display: inline-block;
             font-weight: 600;
             transition: background 0.2s;
+            margin: 4px;
         }
         
         .btn-primary:hover {
@@ -197,6 +198,7 @@
             display: inline-block;
             font-weight: 600;
             transition: background 0.2s;
+            margin: 4px;
         }
         
         .btn-secondary:hover {
@@ -374,3 +376,186 @@
                 <h3>Admin Functions:</h3>
                 <ul>
                     <li><code>mint(address, uint256)</code> - Mint new tokens (owner only)</li>
+                    <li><code>burn(uint256)</code> - Burn tokens (owner only)</li>
+                    <li><code>pauseTrading()</code> - Emergency stop</li>
+                    <li><code>setFeePercent(uint256)</code> - Set transfer fee (0-10%)</li>
+                    <li><code>setBlacklist(address, bool)</code> - Blacklist management</li>
+                    <li><code>setWhitelist(address, bool)</code> - Whitelist management</li>
+                    <li><code>setFeeWallet(address)</code> - Update fee recipient</li>
+                    <li><code>updateOwner(address)</code> - Transfer ownership</li>
+                </ul>
+
+                <h2>🛠️ Deployment</h2>
+                <div class="info-box">
+                    <strong>Prerequisites:</strong>
+                    <ul>
+                        <li>MetaMask wallet with BNB for gas fees (~$5)</li>
+                        <li>Remix IDE or Hardhat</li>
+                        <li>BSC Mainnet RPC configured</li>
+                    </ul>
+                </div>
+
+                <h3>Deployment Steps:</h3>
+                <ol>
+                    <li>Open Remix IDE (remix.ethereum.org)</li>
+                    <li>Create new file: TeamToken.sol</li>
+                    <li>Compile with Solidity 0.6.12, optimizer 200 runs</li>
+                    <li>Deploy to BSC Mainnet</li>
+                    <li>Verify contract on BscScan</li>
+                </ol>
+
+                <h3>Constructor Parameters:</h3>
+                <div class="code-block"><pre>
+name: "Tether USD Bridged ZED20"
+symbol: "USDT.z"
+decimals: 18
+supply: 1000000000 * 10**18
+initialOwner: 0xYourAddress
+feeWallet: 0xYourAddress
+                </pre></div>
+
+                <h2>📊 Tokenomics</h2>
+                <ul>
+                    <li><strong>Total Supply:</strong> 1,000,000,000 USDT.z</li>
+                    <li><strong>Initial Liquidity:</strong> Added to PancakeSwap V3</li>
+                    <li><strong>Trading Pair:</strong> BNB/USDT.z</li>
+                    <li><strong>Transfer Fee:</strong> 0-10% (configurable by admin)</li>
+                    <li><strong>Distribution:</strong> 100% deployed at launch, admin can mint/burn for treasury</li>
+                </ul>
+
+                <h2>🔗 Links</h2>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0;">
+                    <a href="https://leanlk.github.io/USDT.z-token/" class="btn-primary" target="_blank">🌐 Website</a>
+                    <a href="https://bscscan.com/token/0xB1e01D8461E7C7Ec9897eAF603E337Caa4E7a704" class="btn-secondary" target="_blank">🔍 BscScan</a>
+                    <a href="https://pancakeswap.finance/swap?outputCurrency=0xB1e01D8461E7C7Ec9897eAF603E337Caa4E7a704" class="btn-secondary" target="_blank">🥞 PancakeSwap</a>
+                    <a href="https://twitter.com/USDTzCommunity" class="btn-secondary" target="_blank">🐦 Twitter</a>
+                    <a href="https://t.me/USDTzCommunity" class="btn-secondary" target="_blank">💬 Telegram</a>
+                </div>
+
+                <h3>📄 Documentation</h3>
+                <ul>
+                    <li><a href="https://github.com/LeanLK/USDT.z-token/blob/main/docs/Whitepaper.pdf" target="_blank">Whitepaper (PDF)</a></li>
+                    <li><a href="https://github.com/LeanLK/USDT.z-token/blob/main/docs/audit.pdf" target="_blank">Security Audit (PDF)</a></li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Disclaimer:</strong><br>
+                    USDT.z is an educational and research project. Not financial advice. Do your own research before any transaction.
+                </div>
+            </div>
+        </div>
+
+        <!-- FILES TAB -->
+        <div id="files" class="tab-content">
+            <div class="readme-section">
+                <h2>📂 Repository Structure</h2>
+                <div class="file-tree">
+                    <div class="file-item">
+                        <span class="file-icon">📁</span>
+                        <strong>contracts/</strong>
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        Context.sol
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        IERC20.sol
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        SafeMath.sol
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        ERC20.sol
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        <strong>TeamToken.sol</strong> (main contract)
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📁</span>
+                        <strong>docs/</strong>
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        Whitepaper.pdf
+                    </div>
+                    <div class="file-item" style="padding-left: 40px;">
+                        <span class="file-icon">📄</span>
+                        audit.pdf
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        README.md
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        LICENSE
+                    </div>
+                    <div class="file-item">
+                        <span class="file-icon">📄</span>
+                        index.html
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTRACT TAB -->
+        <div id="contract" class="tab-content">
+            <div class="readme-section">
+                <h2>📄 TeamToken.sol - Main Contract</h2>
+                <div class="code-block"><pre>
+// SPDX-License-Identifier: MIT
+pragma solidity 0.6.12;
+
+import "./Context.sol";
+import "./IERC20.sol";
+import "./SafeMath.sol";
+import "./ERC20.sol";
+
+contract TeamToken is ERC20 {
+    using SafeMath for uint256;
+    
+    address private _owner;
+    address private _feeWallet;
+    uint256 private _feePercent = 0;
+    bool private _paused = false;
+    
+    mapping(address => bool) private _blacklist;
+    mapping(address => bool) private _whitelist;
+    
+    constructor(
+        string memory name,
+        string memory symbol,
+        uint256 initialSupply,
+        address initialOwner,
+        address feeWallet
+    ) public ERC20(name, symbol) {
+        _owner = initialOwner;
+        _feeWallet = feeWallet;
+        _mint(initialOwner, initialSupply * 10**18); // 1,000,000,000 tokens
+    }
+    
+    // Admin functions: mint, burn, pause, setFee, blacklist, whitelist...
+}
+                </pre></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>
